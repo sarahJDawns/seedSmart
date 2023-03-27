@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
+      integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>seedSmart</title>
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">seedSmart</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#spacing" class="nav-link">Spacing Table</a>
+            </li>
+            <li class="nav-item">
+              <a href="#calculator" class="nav-link">Seed Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a href="#plant" class="nav-link">Plant Hardiness Zone</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-5 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container mt-5 pt-5">
+        <div
+          class="d-sm-flex align-items-center justify-content-between mt-5 pt-5"
+        >
+          <div class="my-5 py-5">
+            <h1>Start growing <span class="text-warning"> seedSmart</span></h1>
+            <p class="lead my-4">
+              We focus on simplifying your growing journey.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="images/flowers.svg"
+            alt="seedling"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- table -->
+    <section id="spacing" class="bg-info text-light mt-0 p-5 p-lg-5 pt-lg-5">
+      <div class="container">
+        <div class="pb-5">
+          <h3 class="mb-3 mb-md-0 text-center py-5">Spacing Table</h3>
+          <div id="table"></div>
+        </div>
+      </div>
+    </section>
+    <!-- calculator -->
+    <section
+      id="calculator"
+      class="bg-secondary text-light text-center p-5 p-lg-5 pt-lg-5"
+    >
+      <div class="container">
+        <div
+          class="text-center d-flex align-items-center justify-content-center d-sm-flex h1 pt-5 pb-5"
+        >
+          <h3 class="px-2 pt-2">Seed Calculator</h3>
+        </div>
+        <div>
+          <div class="d-sm-flex align-items-center justify-content-around">
+            <div>
+              <p class="lead pt-3">Inches between seeds</p>
+              <input
+                id="in-between"
+                type="text"
+                class="form-control"
+                placeholder="Enter Inches"
+              />
+            </div>
+            <div>
+              <p class="lead pt-3">Length of row</p>
+              <input
+                id="length"
+                type="text"
+                class="form-control"
+                placeholder="Enter Feet"
+              />
+            </div>
+            <div>
+              <p class="lead pt-3">Number of rows</p>
+              <input
+                id="rows"
+                type="text"
+                class="form-control"
+                placeholder="Enter Total Rows"
+              />
+            </div>
+          </div>
+          <button id="calculate" class="btn btn-dark my-5 text-uppercase">
+            Calculate
+          </button>
+          <div class="pb-5">
+            <p class="lead pb-3">Total seeds or plants</p>
+            <p id="calc-display" class="fs-5 fw-bold text-uppercase"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- plant hardiness zone -->
+    <section
+      id="plant"
+      class="bg-info text-light text-center p-5 p-lg-5 pt-lg-5"
+    >
+      <div class="container">
+        <div
+          class="text-center d-flex align-items-center justify-content-center d-sm-flex h1 pt-5 pb-5"
+        >
+          <h3 class="px-2 pt-2">Plant Hardiness Zone</h3>
+        </div>
+        <div>
+          <div class="d-sm-flex align-items-center justify-content-around">
+            <div>
+              <p class="lead pt-3">Find your zone</p>
+              <input
+                id="code"
+                type="text"
+                class="form-control"
+                placeholder="Enter Zip Code"
+              />
+            </div>
+          </div>
+          <button id="zone" class="btn btn-dark my-5 text-uppercase">
+            Find
+          </button>
+          <div class="pb-5">
+            <p class="lead pb-3">You are in zone</p>
+            <p id="zone-display" class="fs-5 fw-bold text-uppercase"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--footer-->
+    <footer
+      id="contact"
+      class="pt-5 bg-dark text-white text-center position-relative"
+    >
+      <div class="overflow-hidden">
+        <div class="row pt-5">
+          <div
+            class="col-md-3 order-md-last mb-5 mb-md-0 pb-5 text-md-start mb-sm-0"
+          >
+            <div class="d-inline-block mb-5 pb-5">
+              <a href="https://twitter.com/sjdawns"
+                ><i class="bi bi-twitter text-white mx-2 fs-2"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/sarah-j-dawns/"
+                ><i class="bi bi-linkedin text-white mx-2 fs-2"></i
+              ></a>
+              <a href="https://github.com/sarahJDawns"
+                ><i class="bi bi-github text-white mx-2 fs-2"></i
+              ></a>
+              <a href="https://sarahjdawns.netlify.app/"
+                ><i class="bi bi-bell text-white mx-2 fs-2"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-5 text-left align-self-end">
+            <p class="lead mb-0 pb-2 mb-lg-0">
+              Copyright &copy; 2023 seedSmart
+            </p>
+          </div>
+        </div>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5 mb-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
