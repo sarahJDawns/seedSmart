@@ -55,6 +55,6 @@ function getZone() {
       document.querySelector("#zone-display").innerText = data.zone;
     })
     .catch((err) => {
-      console.log(error);
+      console.log("error");
     });
 }
