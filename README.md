@@ -1,6 +1,12 @@
 ## seedSmart web app
 
-To help growers calculate their total seed and plant needs for the growing season. A table of seed and planting rate data, a calculator based on total row feet, and a plant hardiness zone finder based on zip code.
+Helps growers calculate total seed and plant needs for the growing season. A table of seed and planting rate data, a calculator based on total row feet, and a plant hardiness zone finder based on zip code.
+
+---
+
+![img](images/seedSmartSet.png)
+
+---
 
 ### Built With
 
