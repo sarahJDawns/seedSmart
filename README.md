@@ -4,7 +4,7 @@ Helps growers calculate total seed and plant needs for the growing season. A tab
 
 ---
 
-![img](images/seedSmartSet.png)
+![img](images/seedSmartSetA.png)
 
 ---
 
